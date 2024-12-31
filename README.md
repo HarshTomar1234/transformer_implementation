@@ -16,19 +16,23 @@ This repository implements the Transformer architecture from the paper ["Attenti
 - Support for multiple language pairs
 
 ## Requirements
+```bash
 torch
 datasets
 tokenizers
 tqdm
 tensorboard
 psutil
+```
 
 
 ## Project Structure
+```bash
 ├── model.py          # Transformer model implementation
 ├── dataset.py        # Dataset handling and processing
 ├── config.py         # Configuration parameters
 └── train.py         # Training loop and utilities
+```
 
 ## Quick Start
 
@@ -38,6 +42,7 @@ pip install -r requirements.txt
 ```
 
 2. Configure training parameters in config.py:
+   ```bash
    config = {
     'batch_size': 8,
     'num_epochs': 20,
@@ -45,10 +50,17 @@ pip install -r requirements.txt
     'lang_src': 'en',
     'lang_tgt': 'fr',
     'seq_len': 350
-}
+   }
+ ```
 
-3. Start training:
-   python train.py
+3. Start Training:
+```bash
+python train.py
+```
+
+
+   
+ 
 
 
 ## Implementation Details
@@ -63,6 +75,7 @@ Model Saving: Checkpoints saved after each epoch
 ## Paper Reference
 The implementation is based on the original Transformer paper:
 
+```bash
 @article{vaswani2017attention,
   title={Attention is all you need},
   author={Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, Łukasz and Polosukhin, Illia},
@@ -70,6 +83,7 @@ The implementation is based on the original Transformer paper:
   volume={30},
   year={2017}
 }
+```
 
 ## Key Features from Paper
 
